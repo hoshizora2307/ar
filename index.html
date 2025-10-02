@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Compass</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="ar-container">
+        <video id="webcam-video" autoplay playsinline></video>
+        <canvas id="ar-canvas"></canvas>
+        <div id="overlay-text">
+            <h1 class="ar-title">Celestial Compass</h1>
+            <p class="ar-subtitle">夜空にかざして、星座を探そう。</p>
+        </div>
+        <div id="info-box">
+            <h2 id="star-name"></h2>
+            <p id="star-info"></p>
+        </div>
+        <div id="company-highlight">
+            <p>あなたの会社のサービスを象徴する星座：<span id="company-constellation"></span></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>プログラミング：hoshizora2307</p>
+        <p>監修：高瀬 敏行</p>
+        <p>権利者：志賀高原SpaceLab</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
