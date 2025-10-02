@@ -1,0 +1,127 @@
+:root {
+    --text-color: #66fcf1;
+    --highlight-color: #45a29e;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    background-color: #000;
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+#ar-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#webcam-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#ar-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+#overlay-text {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 20;
+    animation: fade-in 2s forwards;
+}
+
+.ar-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px var(--text-color);
+}
+
+.ar-subtitle {
+    font-size: 1.2em;
+    color: var(--highlight-color);
+}
+
+#info-box {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-left: 3px solid var(--highlight-color);
+    z-index: 20;
+    animation: fade-in-up 1.5s forwards;
+}
+
+#info-box h2 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #fff;
+}
+
+#info-box p {
+    font-size: 0.9em;
+    margin: 5px 0 0;
+    color: var(--highlight-color);
+}
+
+#company-highlight {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 15px;
+    border-right: 3px solid #ffcc00; /* 会社のハイライトカラー */
+    z-index: 20;
+    animation: fade-in-up 1.5s forwards;
+}
+
+#company-highlight p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #fff;
+}
+
+#company-constellation {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    font-size: 0.7em;
+    color: #777;
+    padding-bottom: 5px;
+    z-index: 5;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
