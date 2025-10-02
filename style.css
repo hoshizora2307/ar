@@ -87,7 +87,7 @@ body {
     right: 20px;
     background: rgba(0, 0, 0, 0.6);
     padding: 10px 15px;
-    border-right: 3px solid #ffcc00; /* 会社のハイライトカラー */
+    border-right: 3px solid #ffcc00;
     z-index: 20;
     animation: fade-in-up 1.5s forwards;
 }
